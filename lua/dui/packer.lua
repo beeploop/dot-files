@@ -112,6 +112,10 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- for commenting
     use ("terrortylor/nvim-comment")
+
+    -- for surroundig selection with bracket pairs or anything with pairs idk
+    use ("kylechui/nvim-surround")
 
 end)
