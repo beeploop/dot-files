@@ -110,4 +110,10 @@ return require('packer').startup(function(use)
         config = function() require('tailwind-sorter').setup() end,
         run = 'cd formatter && npm i && npm run build',
     }
+
+    -- lualine for status lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
