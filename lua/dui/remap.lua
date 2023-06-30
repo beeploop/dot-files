@@ -9,6 +9,11 @@ vim.keymap.set("n", "<leader>ef", function()
     vim.cmd("NvimTreeFocus")
 end)
 
+-- shortcut for opening fugitive Git
+vim.keymap.set("n", "<leader>gs", function()
+    vim.cmd("Git")
+end)
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
