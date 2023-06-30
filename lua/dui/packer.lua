@@ -118,4 +118,7 @@ return require('packer').startup(function(use)
     -- for surroundig selection with bracket pairs or anything with pairs idk
     use ("kylechui/nvim-surround")
 
+    -- dasboard-nvim greeter
+    use ("glepnir/dashboard-nvim")
+
 end)
