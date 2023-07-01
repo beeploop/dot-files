@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>ee", function()
     vim.cmd("NvimTreeToggle")
 end)
 
---shortcut to focus on the nvim tree 
+--shortcut to focus on the nvim tree
 vim.keymap.set("n", "<leader>ef", function()
     vim.cmd("NvimTreeFocus")
 end)
@@ -46,10 +46,12 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- rename all instances of word under the cursor
 vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- make it rain
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
+-- source the current file
 vim.keymap.set("n", "<leader><leader>", function()
-	vim.cmd("so")
+    vim.cmd("so")
 end)
 
 --shortcut to view full error in line
@@ -57,3 +59,7 @@ vim.keymap.set("n", "<leader>e", function()
     vim.cmd("lua vim.diagnostic.open_float()")
 end)
 
+-- wanna see what I look like in the inside??? You can also do this with Shift+k
+vim.keymap.set("n", "<leader>df", function()
+    vim.cmd("lua vim.lsp.buf.hover()")
+end)
