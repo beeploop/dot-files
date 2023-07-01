@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
             { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
+            { 'mfussenegger/nvim-jdtls' },
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
@@ -113,12 +114,8 @@ return require('packer').startup(function(use)
     }
 
     -- for commenting
-    use ("terrortylor/nvim-comment")
+    use("terrortylor/nvim-comment")
 
-    -- for surroundig selection with bracket pairs or anything with pairs idk
-    use ("kylechui/nvim-surround")
-
-    -- dasboard-nvim greeter
-    use ("glepnir/dashboard-nvim")
-
+    -- don't mind this, this is for testing the first plugin I made
+    use "/home/johnloydmulit/repos/lua/my-nvim-plugins/first-nvim-plugin/"
 end)
