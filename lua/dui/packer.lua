@@ -117,4 +117,7 @@ return require('packer').startup(function(use)
 
     -- for commenting
     use("terrortylor/nvim-comment")
+
+    use("mfussenegger/nvim-dap")
+    use("rcarriga/nvim-dap-ui")
 end)
