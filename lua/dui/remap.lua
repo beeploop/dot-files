@@ -54,10 +54,8 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
---shortcut to view full error in line
-vim.keymap.set("n", "<leader>e", function()
-    vim.cmd("lua vim.diagnostic.open_float()")
-end)
+--shortcut to view list of error with Telescope
+vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>")
 
 -- wanna see what I look like in the inside??? You can also do this with Shift+k
 vim.keymap.set("n", "<leader>df", function()

@@ -58,7 +58,6 @@ return require('packer').startup(function(use)
             { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
-            { 'mfussenegger/nvim-jdtls' },
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
@@ -73,6 +72,9 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
+
+    -- lsp for java
+    use('mfussenegger/nvim-jdtls')
 
     use("folke/zen-mode.nvim")
     use("eandrju/cellular-automaton.nvim")
@@ -115,7 +117,4 @@ return require('packer').startup(function(use)
 
     -- for commenting
     use("terrortylor/nvim-comment")
-
-    -- don't mind this, this is for testing the first plugin I made
-    use "/home/johnloydmulit/repos/lua/my-nvim-plugins/first-nvim-plugin/"
 end)
