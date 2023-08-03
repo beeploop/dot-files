@@ -120,4 +120,7 @@ return require('packer').startup(function(use)
 
     use("mfussenegger/nvim-dap")
     use("rcarriga/nvim-dap-ui")
+
+    -- multi line selection
+    use("mg979/vim-visual-multi")
 end)
