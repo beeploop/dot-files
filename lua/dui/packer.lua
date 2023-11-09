@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
         'uloco/bluloco.nvim',
         requires = { 'rktjmp/lush.nvim' }
     }
+    -- use { "ellisonleao/gruvbox.nvim" }
 
     use({
         "folke/trouble.nvim",
@@ -123,4 +124,6 @@ return require('packer').startup(function(use)
 
     -- multi line selection
     use("mg979/vim-visual-multi")
+
+    use("ixru/nvim-markdown")
 end)
