@@ -5,6 +5,9 @@ vim.keymap.set("n", "<leader>ee", function()
     vim.cmd("NvimTreeToggle")
 end)
 
+-- Add a key mapping for inserting the code snippet
+vim.api.nvim_set_keymap('i', '/err', 'if err != nil {\nreturn err\n}<ESC>O', { noremap = true })
+
 --shortcut to focus on the nvim tree
 vim.keymap.set("n", "<leader>ef", function()
     vim.cmd("NvimTreeFocus")
@@ -47,7 +50,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- make it rain
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+vim.keymap.set("n", "<leader>mir", "<cmd>CellularAutomaton make_it_rain<CR>");
+vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>");
 
 -- source the current file
 vim.keymap.set("n", "<leader><leader>", function()
@@ -72,4 +76,3 @@ vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end)
 vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end)
 vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end)
 vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end)
-
