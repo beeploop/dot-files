@@ -77,6 +77,15 @@ return require('packer').startup(function(use)
     -- lsp for java
     use('mfussenegger/nvim-jdtls')
 
+    -- lsp for flutter and flutter tools
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            -- 'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
+
     use("folke/zen-mode.nvim")
     use("eandrju/cellular-automaton.nvim")
     use("laytan/cloak.nvim")
