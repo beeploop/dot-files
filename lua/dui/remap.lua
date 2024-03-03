@@ -1,12 +1,18 @@
 vim.g.mapleader = " "
 
+-- use system clipboard for yank
+vim.keymap.set({ "n", "v" }, "y", '"+y')
+
+-- use system clipboard for paste
+vim.keymap.set({ "n", "v" }, "p", '"+p')
+
 --vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>ee", function()
     vim.cmd("NvimTreeToggle")
 end)
 
 -- Add a key mapping for inserting the code snippet
-vim.api.nvim_set_keymap('i', '/err', 'if err != nil {\nreturn err\n}<ESC>O', { noremap = true })
+vim.api.nvim_set_keymap('i', '/err', 'if err != nil {\nreturn err\n}<ESC>', { noremap = true })
 
 --shortcut to focus on the nvim tree
 vim.keymap.set("n", "<leader>ef", function()
@@ -26,15 +32,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
--- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
-
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "jk", "<Esc>")

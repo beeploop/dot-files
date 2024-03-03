@@ -17,7 +17,10 @@ return require('packer').startup(function(use)
         'uloco/bluloco.nvim',
         requires = { 'rktjmp/lush.nvim' }
     }
-    -- use { "ellisonleao/gruvbox.nvim" }
+    use { "ellisonleao/gruvbox.nvim" }
+    use "rebelot/kanagawa.nvim"
+    use "bluz71/vim-nightfly-colors"
+    use "rose-pine/neovim"
 
     use({
         "folke/trouble.nvim",
