@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 -- use system clipboard for yank
 vim.keymap.set({ "n", "v" }, "y", '"+y')
 
+-- use system clipboard for cut
+vim.keymap.set({ "n", "v" }, "d", '"+d')
+
 -- use system clipboard for paste
 vim.keymap.set({ "n", "v" }, "p", '"+p')
 
