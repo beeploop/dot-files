@@ -45,14 +45,14 @@ return require('packer').startup(function(use)
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");
 
-    use('nvim-tree/nvim-web-devicons')
+    -- use('nvim-tree/nvim-web-devicons')
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        }
-    }
+    -- use {
+    --     'nvim-tree/nvim-tree.lua',
+    --     requires = {
+    --         'nvim-tree/nvim-web-devicons', -- optional
+    --     }
+    -- }
 
     use {
         'VonHeikemen/lsp-zero.nvim',

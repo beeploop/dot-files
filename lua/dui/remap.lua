@@ -11,7 +11,12 @@ vim.keymap.set({ "n", "v" }, "p", '"+p')
 
 --vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>ee", function()
-    vim.cmd("NvimTreeToggle")
+    local filetype = vim.api.nvim_buf_get_option(0, "filetype")
+    if filetype == "netrw" then
+        vim.cmd("q")
+    else
+        vim.cmd("Vex")
+    end
 end)
 
 -- Add a key mapping for inserting the code snippet
