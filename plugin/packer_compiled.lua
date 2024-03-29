@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dirCreator.nvim"] = {
+    loaded = true,
+    path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/dirCreator.nvim",
+    url = "https://github.com/BeepLoop/dirCreator.nvim"
+  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
@@ -134,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -143,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/html5.vim",
     url = "https://github.com/othree/html5.vim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -168,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -209,6 +229,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/nvim-markdown",
     url = "https://github.com/ixru/nvim-markdown"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -271,6 +296,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-nightfly-colors"] = {
+    loaded = true,
+    path = "/home/johnloydmulit/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
+    url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["vim-svelte"] = {
     loaded = true,

@@ -133,9 +133,13 @@ return require('packer').startup(function(use)
 
     use("mfussenegger/nvim-dap")
     use("rcarriga/nvim-dap-ui")
+    use { "nvim-neotest/nvim-nio" }
 
     -- multi line selection
     use("mg979/vim-visual-multi")
 
     use("ixru/nvim-markdown")
+
+    -- my custom plugin for creating directories
+    use("BeepLoop/dirCreator.nvim")
 end)
