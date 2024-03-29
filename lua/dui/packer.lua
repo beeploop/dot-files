@@ -141,5 +141,5 @@ return require('packer').startup(function(use)
     use("ixru/nvim-markdown")
 
     -- my custom plugin for creating directories
-    use("BeepLoop/dirCreator.nvim")
+    use("BeepLoop/dir-creator.nvim")
 end)
