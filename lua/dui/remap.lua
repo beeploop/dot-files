@@ -13,9 +13,9 @@ vim.keymap.set({ "n", "v" }, "p", '"+p')
 vim.keymap.set("n", "<leader>ee", function()
     local filetype = vim.api.nvim_buf_get_option(0, "filetype")
     if filetype == "netrw" then
-        vim.cmd("q")
+        vim.cmd("bprevious")
     else
-        vim.cmd("Vex")
+        vim.cmd("Ex")
     end
 end)
 
