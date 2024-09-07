@@ -18,12 +18,12 @@ return {
 				-- `friendly-snippets` contains a variety of premade snippets.
 				--    See the README about individual language/framework/plugin snippets:
 				--    https://github.com/rafamadriz/friendly-snippets
-				-- {
-				--   'rafamadriz/friendly-snippets',
-				--   config = function()
-				--     require('luasnip.loaders.from_vscode').lazy_load()
-				--   end,
-				-- },
+				{
+					"rafamadriz/friendly-snippets",
+					config = function()
+						require("luasnip.loaders.from_vscode").lazy_load()
+					end,
+				},
 			},
 		},
 		"saadparwaiz1/cmp_luasnip",
@@ -33,9 +33,11 @@ return {
 		--  into multiple repos for maintenance purposes.
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
+
+		"mlaursen/vim-react-snippets",
 	},
 	config = function()
-		-- See `:help cmp`
+		require("vim-react-snippets").lazy_load()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		luasnip.config.setup({})

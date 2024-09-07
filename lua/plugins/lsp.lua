@@ -129,20 +129,6 @@ return {
 						or util.find_git_ancestor(fname)
 				end,
 			},
-			html = {
-				filetypes = {
-					javascript,
-					javascriptreact,
-					json,
-					jsonc,
-					typescript,
-					tsx,
-					typescriptreact,
-					astro,
-					svelte,
-					vue,
-				},
-			},
 			jdtls = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
