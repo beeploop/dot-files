@@ -6,7 +6,7 @@ return {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
         opts = {
-            ensure_installed = { "vimdoc", "javascript", "typescript", "php", "c", "cpp", "lua", "rust", "python", "java", "go" },
+            ensure_installed = { "vimdoc", "javascript", "typescript", "php", "c", "cpp", "lua", "rust", "python", "java", "go", "html", "bash" },
             sync_install = false,
             auto_install = true,
             highlight = {
