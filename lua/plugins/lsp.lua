@@ -119,16 +119,16 @@ return {
 			gopls = {},
 			pyright = {},
 			rust_analyzer = {},
-			biome = {
-				root_dir = function(fname)
-					local util = require("lspconfig.util")
-
-					return util.root_pattern("biome.json", "biome.jsonc")(fname)
-						or util.find_package_json_ancestor(fname)
-						or util.find_node_modules_ancestor(fname)
-						or util.find_git_ancestor(fname)
-				end,
-			},
+			-- biome = {
+			-- 	root_dir = function(fname)
+			-- 		local util = require("lspconfig.util")
+			--
+			-- 		return util.root_pattern("biome.json", "biome.jsonc")(fname)
+			-- 			or util.find_package_json_ancestor(fname)
+			-- 			or util.find_node_modules_ancestor(fname)
+			-- 			or util.find_git_ancestor(fname)
+			-- 	end,
+			-- },
 			jdtls = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -136,7 +136,7 @@ return {
 			--    https://github.com/pmizio/typescript-tools.nvim
 			--
 			-- But for many setups, the LSP (`tsserver`) will work just fine
-			-- tsserver = {},
+			tsserver = {},
 			--
 
 			lua_ls = {
