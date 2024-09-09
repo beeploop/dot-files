@@ -38,7 +38,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- This is going to get me cancelled
-vim.keymap.set("i", "kj", "<Esc>")
+vim.keymap.set("i", "jk", "<Esc>")
 
 -- vim.keymap.set("n", "ff", vim.lsp.buf.format)
 
