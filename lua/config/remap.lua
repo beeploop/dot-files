@@ -59,6 +59,13 @@ vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
 
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.goto_next()
+end)
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.goto_prev()
+end)
+
 --shortcut to view list of error with Telescope
 -- vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>")
 
