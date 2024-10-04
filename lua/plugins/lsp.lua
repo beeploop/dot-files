@@ -165,6 +165,7 @@ return {
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
 			"typescript-language-server",
+			"tailwindcss",
 			"eslint-lsp",
 			"java-debug-adapter",
 			"java-test",
