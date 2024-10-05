@@ -1,5 +1,3 @@
-print("hello dart developer")
-
 local on_attach = function(client, buf)
 	local opts = { buffer = buf, remap = false }
 
