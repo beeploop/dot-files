@@ -29,38 +29,6 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
-				-- vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>")
-				-- vim.keymap.set("n", "gd", function()
-				-- 	vim.lsp.buf.definition()
-				-- end)
-				-- vim.keymap.set("n", "K", function()
-				-- 	vim.lsp.buf.hover()
-				-- end)
-				-- vim.keymap.set("n", "<leader>ws", function()
-				-- 	vim.lsp.buf.workspace_symbol()
-				-- end)
-				-- vim.keymap.set("n", "<leader>vd", function()
-				-- 	vim.diagnostic.open_float()
-				-- end)
-				-- vim.keymap.set("n", "]d", function()
-				-- 	vim.diagnostic.goto_next()
-				-- end)
-				-- vim.keymap.set("n", "[d", function()
-				-- 	vim.diagnostic.goto_prev()
-				-- end)
-				-- vim.keymap.set("n", "<leader>ca", function()
-				-- 	vim.lsp.buf.code_action()
-				-- end)
-				-- vim.keymap.set("n", "<leader>rr", function()
-				-- 	vim.lsp.buf.references()
-				-- end)
-				-- vim.keymap.set("n", "<leader>rn", function()
-				-- 	vim.lsp.buf.rename()
-				-- end)
-				-- vim.keymap.set("i", "<leader>hh>", function()
-				-- 	vim.lsp.buf.signature_help()
-				-- end)
-
 				-- The following two autocommands are used to highlight references of the
 				-- word under your cursor when your cursor rests there for a little while.
 				--    See `:help CursorHold` for information about when this is executed
@@ -157,6 +125,24 @@ return {
 					},
 				},
 			},
+
+			templ = {},
+			html = {
+				filetypes = { "html", "htmx" },
+			},
+			htmx = {
+				filetypes = { "html", "htmx" },
+			},
+			tailwindcss = {
+				filetypes = { "html", "astro", "templ", "javascript", "typescript", "react" },
+				settings = {
+					tailwindCSS = {
+						includeLanguages = {
+							templ = "html",
+						},
+					},
+				},
+			},
 		}
 
 		require("mason").setup()
@@ -165,7 +151,6 @@ return {
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
 			"typescript-language-server",
-			"tailwindcss",
 			"eslint-lsp",
 			"java-debug-adapter",
 			"java-test",
