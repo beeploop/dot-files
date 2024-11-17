@@ -34,17 +34,17 @@ return {
 				"stl",
 				fmt(
 					[[
-            import 'package:flutter/material.dart';
+                    import 'package:flutter/material.dart';
 
-            class {} extends StatelessWidget {{
-                const {}({{super.key}});
+                    class {} extends StatelessWidget {{
+                        const {}({{super.key}});
 
-                @override
-                Widget build(BuildContext context) {{
-                    throw UnimplementedError();
-                }}
-            }}
-            ]],
+                        @override
+                        Widget build(BuildContext context) {{
+                            throw UnimplementedError();
+                        }}
+                    }}
+                    ]],
 					{ i(1), rep(1) }
 				)
 			),
@@ -64,7 +64,9 @@ return {
                     class _{}State extends State<{}> {{
                         @override
                         Widget build(BuildContext context) {{
-                            return Scaffold();
+                            return Scaffold(
+                              {}
+                            );
                         }}
                     }}
                     ]],
@@ -75,7 +77,21 @@ return {
 						rep(1),
 						rep(1),
 						rep(1),
+						i(2),
 					}
+				)
+			),
+			s(
+				"cnp",
+				fmt(
+					[[
+                    import 'package:flutter/foundation.dart';
+
+                    class {}Provider extends ChangeNotifier {{
+                        {}
+                    }}
+                    ]],
+					{ i(1), i(2) }
 				)
 			),
 		})
