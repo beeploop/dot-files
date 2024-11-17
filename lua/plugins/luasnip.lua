@@ -95,5 +95,54 @@ return {
 				)
 			),
 		})
+
+		-- Go snippets
+		ls.add_snippets("go", {
+			s(
+				"sef",
+				fmt(
+					[[
+                    if err := {}({}); err != nil {{
+                        return err
+                    }}
+                    ]],
+					{ i(1), i(2) }
+				)
+			),
+			s(
+				"cef",
+				fmt(
+					[[
+                    {}, err := {}({})
+                    if err != nil {{
+                        {}
+                    }}
+                    ]],
+					{
+						i(1),
+						i(2),
+						i(3),
+						i(4),
+					}
+				)
+			),
+			s(
+				"smf",
+				fmt(
+					[[
+                    func ({}) {}({}) {} {{
+                        {}
+                    }}
+                    ]],
+					{
+						i(1),
+						i(2),
+						i(3),
+						i(4),
+						i(5),
+					}
+				)
+			),
+		})
 	end,
 }
