@@ -11,14 +11,14 @@ vim.keymap.set({ "n", "v" }, "d", '"+d')
 vim.keymap.set({ "n", "v" }, "p", '"+p')
 
 --vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>ee", function()
-	local filetype = vim.api.nvim_buf_get_option(0, "filetype")
-	if filetype == "netrw" then
-		vim.cmd("bprevious")
-	else
-		vim.cmd("Ex")
-	end
-end)
+-- vim.keymap.set("n", "<leader>ee", function()
+-- 	local filetype = vim.api.nvim_buf_get_option(0, "filetype")
+-- 	if filetype == "netrw" then
+-- 		vim.cmd("bprevious")
+-- 	else
+-- 		vim.cmd("Ex")
+-- 	end
+-- end)
 
 -- Add a key mapping for inserting the code snippet
 vim.api.nvim_set_keymap("i", "/er", "if err != nil {\nreturn err\n}<ESC>", { noremap = true })
