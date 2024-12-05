@@ -143,6 +143,22 @@ return {
 					}
 				)
 			),
+			s(
+				"deadctx",
+				fmt(
+					[[
+                    ctx, cancel := context.WithTimeout(context.Background(), {}*time.Second)
+                    defer cancel()
+
+                    if ctx.Err() == context.DeadlineExceeded {{
+                        return context.DeadlineExceeded
+                    }}
+                    ]],
+					{
+						i(1),
+					}
+				)
+			),
 		})
 	end,
 }
