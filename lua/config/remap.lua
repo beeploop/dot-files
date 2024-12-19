@@ -10,9 +10,6 @@ vim.keymap.set({ "n", "v" }, "d", '"+d')
 -- Use system clipboard for paste
 vim.keymap.set({ "n", "v" }, "p", '"+p')
 
--- Add a key mapping for inserting the code snippet
-vim.api.nvim_set_keymap("i", "/er", "if err != nil {\nreturn err\n}<ESC>", { noremap = true })
-
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -35,4 +32,8 @@ vim.keymap.set("n", "]d", function()
 end)
 vim.keymap.set("n", "[d", function()
 	vim.diagnostic.goto_prev()
+end)
+
+vim.keymap.set("i", "K", function()
+	vim.lsp.buf.signature_help()
 end)
