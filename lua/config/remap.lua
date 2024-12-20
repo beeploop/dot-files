@@ -34,6 +34,6 @@ vim.keymap.set("n", "[d", function()
 	vim.diagnostic.goto_prev()
 end)
 
-vim.keymap.set("i", "K", function()
+vim.keymap.set("i", "<c-k>", function()
 	vim.lsp.buf.signature_help()
 end)
