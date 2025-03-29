@@ -1,8 +1,5 @@
 return {
 	"folke/zen-mode.nvim",
-	dependencies = {
-		"folke/twilight.nvim", -- Optional: for code focusing
-	},
 	opts = {
 		window = {
 			width = 90,
@@ -19,7 +16,6 @@ return {
 				shocmd = true,
 				laststatus = 3,
 			},
-			twilight = { enabled = true },
 			tmux = { enabled = false },
 		},
 	},
