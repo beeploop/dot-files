@@ -6,10 +6,19 @@ return {
 	opts = {
 		window = {
 			width = 90,
-			options = {},
+			options = {
+				number = false,
+				relativenumber = false,
+				cursorline = false,
+				cursorcolumn = false,
+			},
 		},
 		plugins = {
-			options = {},
+			options = {
+				enabled = true,
+				shocmd = true,
+				laststatus = 3,
+			},
 			twilight = { enabled = true },
 			tmux = { enabled = false },
 		},
