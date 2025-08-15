@@ -4,7 +4,6 @@ return {
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		{ "j-hui/fidget.nvim", opts = {} },
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
@@ -131,7 +130,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
-			"typescript-language-server",
+			"biome",
 			"eslint-lsp",
 			"java-debug-adapter",
 			"java-test",
