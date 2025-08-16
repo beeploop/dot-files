@@ -27,7 +27,6 @@ return {
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local servers = {
 				-- See `:help lspconfig-all` for a list of all the pre-configured LSPs
-				astro = {},
 				clangd = {},
 				gopls = {},
 				pyright = {},
@@ -44,10 +43,8 @@ return {
 						},
 					},
 				},
-
-				templ = {},
 				html = {
-					filetpes = { "html", "htmx" },
+					filetypes = { "html" },
 				},
 				tailwindcss = {
 					filetypes = { "html", "astro", "templ", "javascript", "typescript", "react" },
@@ -64,7 +61,6 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
-				"typescript-language-server",
 				"eslint-lsp",
 				"java-debug-adapter",
 				"java-test",
