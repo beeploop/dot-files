@@ -1,12 +1,9 @@
 return {
 	{
-		-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
-		-- used for completion, annotations and signatures of Neovim apis
 		"folke/lazydev.nvim",
 		ft = "lua",
 		opts = {
 			library = {
-				-- Load luvit types when the `vim.uv` word is found
 				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 			},
 		},
@@ -30,6 +27,7 @@ return {
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local servers = {
 				-- See `:help lspconfig-all` for a list of all the pre-configured LSPs
+				astro = {},
 				clangd = {},
 				gopls = {},
 				pyright = {},
@@ -49,9 +47,6 @@ return {
 
 				templ = {},
 				html = {
-					filetpes = { "html", "htmx" },
-				},
-				htmx = {
 					filetpes = { "html", "htmx" },
 				},
 				tailwindcss = {

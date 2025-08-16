@@ -19,7 +19,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- This is going to get me cancelled
 vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "<leader>]", "<cmd>cnext<CR>zz")
