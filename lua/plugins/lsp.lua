@@ -32,6 +32,7 @@ return {
 				pyright = {},
 				rust_analyzer = {},
 				ts_ls = {},
+				java_language_server = {},
 				--
 
 				lua_ls = {
@@ -44,7 +45,10 @@ return {
 					},
 				},
 				html = {
-					filetypes = { "html" },
+					filetypes = { "html", "astro" },
+				},
+				astro = {
+					filetypes = { "astro" },
 				},
 				tailwindcss = {
 					filetypes = { "html", "astro", "templ", "javascript", "typescript", "react" },

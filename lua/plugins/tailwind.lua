@@ -1,4 +1,8 @@
 return {
+	-- {
+	-- 	dir = "~/repos/lua/neovim/tailwind-tools.nvim/",
+	-- 	opts = {},
+	-- },
 	"luckasRanarison/tailwind-tools.nvim",
 	name = "tailwind-tools",
 	build = ":UpdateRemotePlugins",
