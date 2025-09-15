@@ -45,7 +45,7 @@ return {
 					},
 				},
 				html = {
-					filetypes = { "html", "astro" },
+					filetypes = { "html", "astro", "javascript", "typescript", "react" },
 				},
 				astro = {
 					filetypes = { "astro" },
@@ -68,6 +68,7 @@ return {
 				"eslint-lsp",
 				"java-debug-adapter",
 				"java-test",
+				"cssls",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
