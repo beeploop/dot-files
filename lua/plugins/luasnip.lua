@@ -160,5 +160,28 @@ return {
 				)
 			),
 		})
+
+		ls.add_snippets("html", {
+			s(
+				"html",
+				fmt(
+					[[
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>{}</title>
+                        <link rel="stylesheet" href="style.css">
+                    </head>
+                    <body>
+                        {}
+                    </body>
+                    </html>
+                    ]],
+					{ i(1), i(2) }
+				)
+			),
+		})
 	end,
 }
