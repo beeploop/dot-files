@@ -31,7 +31,16 @@ return {
 				gopls = {},
 				pyright = {},
 				rust_analyzer = {},
-				ts_ls = {},
+				ts_ls = {
+					root_dir = require("lspconfig").util.root_pattern({ "package.json", "tsconfig.json" }),
+					single_file_support = false,
+					settings = {},
+				},
+				denols = {
+					root_dir = require("lspconfig").util.root_pattern({ "deno.json", "deno.jsonrc" }),
+					single_file_support = false,
+					settings = {},
+				},
 				java_language_server = {},
 				--
 
