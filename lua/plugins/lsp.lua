@@ -54,7 +54,14 @@ return {
 					},
 				},
 				html = {
-					filetypes = { "html", "astro", "javascript", "typescript", "react" },
+					filetypes = { "html", "astro", "javascript", "typescript", "react", "templ" },
+					settings = {
+						html = {
+							includeLanguages = {
+								templ = "html",
+							},
+						},
+					},
 				},
 				astro = {
 					filetypes = { "astro" },
@@ -69,6 +76,18 @@ return {
 						},
 					},
 				},
+				eslint = {
+					root_dir = require("lspconfig").util.root_pattern(
+						".eslintrc",
+						".eslintrc.js",
+						".eslintrc.cjs",
+						".eslintrc.json",
+						"eslint.config.js",
+						"eslint.config.mjs",
+						"package.json"
+					),
+				},
+				templ = {},
 			}
 
 			local ensure_installed = vim.tbl_keys(servers or {})
