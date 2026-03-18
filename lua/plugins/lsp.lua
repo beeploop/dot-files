@@ -30,6 +30,22 @@ return {
 				clangd = {},
 				gopls = {},
 				pyright = {},
+				-- pylsp = {
+				-- 	settings = {
+				-- 		pylsp = {
+				-- 			plugins = {
+				-- 				pyflakes = { enabled = false },
+				-- 				pycodestyle = { enabled = false },
+				-- 				autopep8 = { enabled = false },
+				-- 				yapf = { enabled = false },
+				-- 				mccabe = { enabled = false },
+				-- 				pylsp_mypy = { enabled = false },
+				-- 				pylsp_black = { enabled = false },
+				-- 				pylsp_isort = { enabled = false },
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
 				rust_analyzer = {},
 				ts_ls = {
 					root_dir = require("lspconfig").util.root_pattern({ "package.json", "tsconfig.json" }),
@@ -97,6 +113,8 @@ return {
 				"java-debug-adapter",
 				"java-test",
 				"cssls",
+				"ruff", -- rust-based formatter for python
+				"shfmt", -- shell formatter
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
