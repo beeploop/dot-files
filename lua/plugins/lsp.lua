@@ -29,7 +29,25 @@ return {
 				-- See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				clangd = {},
 				gopls = {},
-				pyright = {},
+				pyright = {
+					settings = {
+						python = {
+							pythonPath = vim.fn.getcwd() .. "./.venv/bin/python",
+						},
+						pyright = {
+							root_dir = require("lspconfig").util.root_pattern(
+								"pyproject.toml",
+								"setup.py",
+								"setup.cfg",
+								"requirements.txt",
+								".git"
+							),
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							diagnosticMode = "openFilesOnly",
+						},
+					},
+				},
 				-- pylsp = {
 				-- 	settings = {
 				-- 		pylsp = {
@@ -127,6 +145,9 @@ return {
 							local server = servers[server_name] or {}
 							server.capabilities =
 								vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+							server.flags = {
+								debounce_text_changes = 150,
+							}
 							require("lspconfig")[server_name].setup(server)
 						end
 					end,
